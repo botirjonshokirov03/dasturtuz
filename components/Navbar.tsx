@@ -1,14 +1,14 @@
-type NavbarProps ={
-    name: string;
-    surname: string;
-    age: number
-}
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
-export default function Navbar({name, surname, age}: NavbarProps){
-    return(
-        <>
-        <h1>This is Navbar</h1>
-        <span>My name is {name}, my surname is {surname}, my age is {age}</span>
-        </>
-    )
+export default function Navbar() {
+  return (
+    <nav className="w-full flex items-center justify-between px-6 py-3">
+      <h1 className="text-lg font-bold text-neutral-800 dark:text-neutral-100">
+        This is Navbar
+      </h1>
+      <div>
+        <ThemeSwitcher />
+      </div>
+    </nav>
+  );
 }
